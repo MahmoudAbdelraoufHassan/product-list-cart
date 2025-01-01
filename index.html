@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product list with cart</title>
-
+  <link rel="stylesheet" href="assets/css/style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,60 +15,51 @@
   </style>
 </head>
 <body>
-
-  Desserts
-
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
-
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
-
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
-
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
-
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
-
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
-
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
-
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
-
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
-
-  Your Cart (<!-- Quantity -->)
-  Your added items will appear here
-
-  <div class="attribution">
+  <div class="app">
+    <div class="app__container">
+      <div class="app__container-products">
+        <h1>Desserts</h1>
+        <div class="app__container-products__menu">
+          
+        </div>
+      </div>
+      <div class="app__container-order">
+        <h1>Your Cart (<span>0</span>)</h1>
+        <div class="app__container-order__list">
+        </div>
+        <div class="app__container-order__total">
+          <span>Order Total</span>
+          <h2 class="total"></h2>
+        </div>
+        <div class="app__container-order__info">
+          <img src="./assets/images/icon-carbon-neutral.svg" alt="curbon">
+          <p>this is a <span>curbon-natural</span> delivery</p>
+        </div>
+        <button class="app__container-order__btn" onclick="showPopup()">Confirm Order</button>
+      </div>
+    </div>
+    <div class="app__popup">
+      <div class="app__popup-orderlist">
+        <img src="./assets/images/icon-order-confirmed.svg" alt="" srcset="" class="confirm-icon">
+        <img src="./assets//images/icon-remove-item.svg" class="remove-icon" onclick="hidePopUp()">
+        <h1>Order Confirmed</h1>
+        <p>We hope you enjoy your food!</p>
+        <div class="app__popup-orderlist__orders">
+          <div class="orders-list">
+          </div>
+          <div class="app__popup-order__total">
+            <span>Order Total</span>
+            <h2 class="total"></h2>
+          </div>
+        </div>
+        <button class="app__popup-order__button" onclick="startNewOrder()">Start New Order</button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
