@@ -255,9 +255,11 @@ function startNewOrder(){
     // const cartBtn = document.querySelectorAll('.product__container-image .product__actions button');
     actionBtns.forEach((e)=> { 
         const img = e.previousElementSibling.querySelector('img');
+        const quantityValue = e.querySelector('.quantity span')
         const quantityBtn = e.querySelector('.quantity');
         const cartBtn = e.querySelector('button')
         if(quantityBtn.classList.contains('show')){
+            quantityValue.innerText = 1;
             img.classList.remove('selected');
             quantityBtn.classList.remove('show');
             cartBtn.classList.remove('hide')
