@@ -54,7 +54,6 @@ async function getProducts(){
 function AddToCart(btn, product){
     const selectImgDiv = btn.parentElement.parentElement.querySelector('picture img');
     selectImgDiv.classList.add('selected');
-    console.log(product);
     const quantityDiv = btn.nextElementSibling;
     quantityDiv.classList.add("show");
     btn.classList.add("hide");
@@ -252,7 +251,6 @@ function hidePopUp(){
 function startNewOrder(){
     updateLocalStorage([]);
     const actionBtns = document.querySelectorAll('.product__container-image .product__actions');
-    // const cartBtn = document.querySelectorAll('.product__container-image .product__actions button');
     actionBtns.forEach((e)=> { 
         const img = e.previousElementSibling.querySelector('img');
         const quantityValue = e.querySelector('.quantity span')
