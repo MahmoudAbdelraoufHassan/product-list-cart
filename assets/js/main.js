@@ -20,7 +20,7 @@ async function getProducts(){
             </picture>
             <div class='product__actions'>
             <button id='${product.id}' onclick='AddToCart(this,${JSON.stringify(product)})'>
-            <img src='../assets/images/icon-add-to-cart.svg'>
+            <img src='./assets/images/icon-add-to-cart.svg'>
             <span>Add to Cart</span>
             </button>
             <div class='quantity'>
